@@ -1,7 +1,7 @@
 package com.DRR.PuntuaShow.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 
 /**
  * La anotación @Entity indica que esta clase
@@ -13,4 +13,15 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "series")
 public class Serie {
+
+    /**
+     * @Id indica que este campo es la clave primaria.
+     * @GeneratedValue indica cómo se genera el ID.
+     *
+     * IDENTITY → la base de datos se encarga de generar
+     * un valor autoincremental (como AUTO_INCREMENT en SQL).
+     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 }
