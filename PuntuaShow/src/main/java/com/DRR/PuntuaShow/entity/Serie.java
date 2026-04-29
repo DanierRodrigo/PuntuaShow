@@ -66,4 +66,16 @@ public class Serie {
      */
     public Serie() {
     }
+
+    /**
+     * Constructor con parámetros.
+     * Muy útil para crear objetos manualmente.
+     */
+    public Serie(String nombre, Integer anio, String genero, String director, Integer puntuacion) {
+        this.nombre = nombre;
+        this.anio = anio;
+        this.genero = genero;
+        this.director = director;
+        this.puntuacion = puntuacion;
+    }
 }
