@@ -41,4 +41,14 @@ public class Serie {
      * con el mismo nombre del atributo.
      */
     private Integer anio;
+
+    /**
+     * Género de la serie (Drama, Comedia, etc.)
+     */
+    private String genero;
+
+    /**
+     * Director de la serie
+     */
+    private String director;
 }
