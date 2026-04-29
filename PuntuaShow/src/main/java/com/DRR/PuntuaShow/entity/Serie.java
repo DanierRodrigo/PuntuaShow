@@ -15,8 +15,8 @@ import jakarta.persistence.*;
 public class Serie {
 
     /**
-     * @Id indica que este campo es la clave primaria.
-     * @GeneratedValue indica cómo se genera el ID.
+     * @ Id indica que este campo es la clave primaria.
+     * @ GeneratedValue indica cómo se genera el ID.
      *
      * IDENTITY → la base de datos se encarga de generar
      * un valor autoincremental (como AUTO_INCREMENT en SQL).
@@ -26,9 +26,8 @@ public class Serie {
     private Long id;
 
     /**
-     * @Column permite configurar la columna en la BD.
-     *
-     * nullable = false → este campo es obligatorio.
+     * @ Column permite configurar la columna en la BD.
+     * -nullable = "false" → este campo es obligatorio.
      * No se puede guardar una serie sin nombre.
      */
     @Column(nullable = false)
@@ -36,7 +35,6 @@ public class Serie {
 
     /**
      * Año de la serie (no obligatorio).
-     *
      * Al no poner @Column, JPA lo mapeará automáticamente
      * con el mismo nombre del atributo.
      */
@@ -51,4 +49,11 @@ public class Serie {
      * Director de la serie
      */
     private String director;
+
+    /**
+     * Puntuación que le da el usuario (1–10)
+     */
+    @Column(name = "puntuacion_usuario")
+    // Nombre personalizado en la base de datos
+    private Integer puntuacion;
 }
