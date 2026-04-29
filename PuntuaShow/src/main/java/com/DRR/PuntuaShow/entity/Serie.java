@@ -56,4 +56,14 @@ public class Serie {
     @Column(name = "puntuacion_usuario")
     // Nombre personalizado en la base de datos
     private Integer puntuacion;
+
+
+    /**
+     * Constructor vacío obligatorio para JPA.
+     *
+     * Hibernate necesita poder crear instancias
+     * de la clase mediante reflexión.
+     */
+    public Serie() {
+    }
 }
