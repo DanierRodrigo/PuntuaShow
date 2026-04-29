@@ -33,4 +33,12 @@ public class Serie {
      */
     @Column(nullable = false)
     private String nombre;
+
+    /**
+     * Año de la serie (no obligatorio).
+     *
+     * Al no poner @Column, JPA lo mapeará automáticamente
+     * con el mismo nombre del atributo.
+     */
+    private Integer anio;
 }
