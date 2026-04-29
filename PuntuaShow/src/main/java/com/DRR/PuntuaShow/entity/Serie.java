@@ -24,4 +24,13 @@ public class Serie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    /**
+     * @Column permite configurar la columna en la BD.
+     *
+     * nullable = false → este campo es obligatorio.
+     * No se puede guardar una serie sin nombre.
+     */
+    @Column(nullable = false)
+    private String nombre;
 }
