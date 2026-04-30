@@ -18,4 +18,7 @@ public interface SerieService {
 
     // Buscar por ID
     Optional<Serie> findById(Long id);
+
+    // Guardar o actualizar
+    Serie save(Serie serie);
 }
