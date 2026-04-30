@@ -27,4 +27,9 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
      */
     List<Serie> findByNombre(String nombre);
 
+    /**
+     * Buscar por género
+     */
+    List<Serie> findByGenero(String genero);
+
 }
