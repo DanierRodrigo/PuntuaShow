@@ -21,4 +21,7 @@ public interface SerieService {
 
     // Guardar o actualizar
     Serie save(Serie serie);
+
+    // Borrar por ID
+    void deleteById(Long id);
 }
