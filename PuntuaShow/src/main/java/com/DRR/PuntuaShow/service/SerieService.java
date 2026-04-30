@@ -1,4 +1,10 @@
 package com.DRR.PuntuaShow.service;
 
-public class SerieService {
+/**
+ * Definimos el contrato del servicio.
+ *
+ * Aquí declaramos QUÉ se puede hacer,
+ * no CÓMO se hace.
+ */
+public interface SerieService {
 }
