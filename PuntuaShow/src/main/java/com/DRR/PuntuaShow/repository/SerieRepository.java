@@ -40,4 +40,9 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
      */
     List<Serie> findByPuntuacionGreaterThanEqual(Integer puntuacion);
 
+    /**
+     * Buscar por director
+     */
+    List<Serie> findByDirector(String director);
+
 }
