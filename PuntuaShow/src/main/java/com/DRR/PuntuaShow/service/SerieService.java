@@ -1,5 +1,9 @@
 package com.DRR.PuntuaShow.service;
 
+import com.DRR.PuntuaShow.entity.Serie;
+
+import java.util.List;
+
 /**
  * Definimos el contrato del servicio.
  *
@@ -7,4 +11,7 @@ package com.DRR.PuntuaShow.service;
  * no CÓMO se hace.
  */
 public interface SerieService {
+
+    // Obtener todas las series
+    List<Serie> findAll();
 }
