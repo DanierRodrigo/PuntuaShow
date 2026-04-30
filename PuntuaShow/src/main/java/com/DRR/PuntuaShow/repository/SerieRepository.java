@@ -32,4 +32,12 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
      */
     List<Serie> findByGenero(String genero);
 
+    /**
+     * Buscar series con puntuación mayor o igual a X
+     *
+     * Traducción:
+     * SELECT * FROM series WHERE puntuacion >= ?
+     */
+    List<Serie> findByPuntuacionGreaterThanEqual(Integer puntuacion);
+
 }
