@@ -24,4 +24,16 @@ public interface SerieService {
 
     // Borrar por ID
     void deleteById(Long id);
+
+    // =========================
+    // MÉTODOS PERSONALIZADOS
+    // =========================
+
+    List<Serie> findByNombre(String nombre);
+
+    List<Serie> findByGenero(String genero);
+
+    List<Serie> findByPuntuacionMinima(Integer puntuacion);
+
+    List<Serie> findByDirector(String director);
 }
