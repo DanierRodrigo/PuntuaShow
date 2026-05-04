@@ -1,7 +1,9 @@
 package com.DRR.PuntuaShow.service.impl;
 
 import com.DRR.PuntuaShow.entity.Serie;
+import com.DRR.PuntuaShow.repository.SerieRepository;
 import com.DRR.PuntuaShow.service.SerieService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +15,19 @@ import java.util.Optional;
  */
 @Service
 public class SerieServiceImpl implements SerieService {
+
+    /**
+     * Inyección del repository.
+     *
+     * Spring nos proporciona automáticamente la instancia con Autowired.
+     */
+    @Autowired
+    private SerieRepository serieRepository;
+
+    // =========================
+    // MÉTODOS CRUD BÁSICOS
+    // =========================
+
     @Override
     public List<Serie> findAll() {
         return List.of();
