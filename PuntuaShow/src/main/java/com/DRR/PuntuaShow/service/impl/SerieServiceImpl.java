@@ -40,7 +40,14 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public Serie save(Serie serie) {
-        return null;
+        /**
+         * Aquí es donde podríamos añadir lógica de negocio.
+         * Ejemplo:
+         * - validar puntuación
+         * - evitar duplicados
+         */
+
+        return serieRepository.save(serie);
     }
 
     @Override
