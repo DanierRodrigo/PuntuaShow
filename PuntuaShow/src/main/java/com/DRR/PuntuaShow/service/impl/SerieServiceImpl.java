@@ -71,7 +71,7 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public List<Serie> findByPuntuacionMinima(Integer puntuacion) {
-        return List.of();
+        return serieRepository.findByPuntuacionGreaterThanEqual(puntuacion);
     }
 
     @Override
