@@ -66,7 +66,7 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public List<Serie> findByGenero(String genero) {
-        return List.of();
+        return serieRepository.findByGenero(genero);
     }
 
     @Override
