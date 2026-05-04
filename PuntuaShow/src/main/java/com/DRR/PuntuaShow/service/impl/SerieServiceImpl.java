@@ -76,6 +76,6 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public List<Serie> findByDirector(String director) {
-        return List.of();
+        return serieRepository.findByDirector(director);
     }
 }
