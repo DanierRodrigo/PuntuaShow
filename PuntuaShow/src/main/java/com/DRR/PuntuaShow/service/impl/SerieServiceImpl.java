@@ -30,7 +30,7 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public List<Serie> findAll() {
-        return List.of();
+        return serieRepository.findAll();
     }
 
     @Override
