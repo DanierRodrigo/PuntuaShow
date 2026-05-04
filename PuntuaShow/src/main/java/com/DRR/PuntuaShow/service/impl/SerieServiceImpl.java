@@ -52,7 +52,7 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public void deleteById(Long id) {
-
+        serieRepository.deleteById(id);
     }
 
     @Override
