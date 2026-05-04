@@ -55,9 +55,13 @@ public class SerieServiceImpl implements SerieService {
         serieRepository.deleteById(id);
     }
 
+    // =========================
+    // MÉTODOS PERSONALIZADOS
+    // =========================
+
     @Override
     public List<Serie> findByNombre(String nombre) {
-        return List.of();
+        return serieRepository.findByNombre(nombre);
     }
 
     @Override
