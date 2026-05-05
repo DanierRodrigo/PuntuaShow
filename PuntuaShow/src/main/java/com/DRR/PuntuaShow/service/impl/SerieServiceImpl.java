@@ -40,12 +40,9 @@ public class SerieServiceImpl implements SerieService {
 
     @Override
     public Serie save(Serie serie) {
-        /**
-         * Aquí es donde podríamos añadir lógica de negocio.
-         * Ejemplo:
-         * - validar puntuación
-         * - evitar duplicados
-         */
+        if (serie.getPuntuacion() < 1 || serie.getPuntuacion() > 10) {
+            throw new IllegalArgumentException("La puntuación debe estar entre 1 y 10");
+        }
 
         return serieRepository.save(serie);
     }
