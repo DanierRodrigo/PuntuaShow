@@ -1,5 +1,7 @@
 package com.DRR.PuntuaShow.controller;
 
+import com.DRR.PuntuaShow.service.SerieService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,4 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RequestMapping("/api/series")
 public class SerieController {
+
+    /**
+     * Inyectamos el service (NO el repository)
+     */
+    @Autowired
+    private SerieService serieService;
+
 }
