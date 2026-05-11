@@ -1,9 +1,13 @@
 package com.DRR.PuntuaShow.controller;
 
+import com.DRR.PuntuaShow.entity.Serie;
 import com.DRR.PuntuaShow.service.SerieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @RestController indica que esta clase es un controlador REST.
@@ -28,5 +32,17 @@ public class SerieController {
      */
     @Autowired
     private SerieService serieService;
+
+    // =========================
+    // GET - Obtener todas las series
+    // =========================
+
+    /**
+     * GET /api/series
+     */
+    @GetMapping
+    public List<Serie> getAllSeries() {
+        return serieService.findAll();
+    }
 
 }
