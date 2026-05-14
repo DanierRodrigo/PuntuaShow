@@ -3,10 +3,7 @@ package com.DRR.PuntuaShow.controller;
 import com.DRR.PuntuaShow.entity.Serie;
 import com.DRR.PuntuaShow.service.SerieService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -58,5 +55,21 @@ public class SerieController {
     public Optional<Serie> getSerieById(@PathVariable Long id) {
         return serieService.findById(id);
     }
+
+    // =========================
+    // POST - Crear nueva serie
+    // =========================
+
+    /**
+     * POST /api/series
+     *
+     * @RequestBody convierte JSON → objeto Java
+     */
+    @PostMapping
+    public Serie createSerie(@RequestBody Serie serie) {
+        return serieService.save(serie);
+    }
+
+
 
 }
