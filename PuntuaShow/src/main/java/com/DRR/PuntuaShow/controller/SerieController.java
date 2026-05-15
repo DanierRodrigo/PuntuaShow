@@ -69,6 +69,24 @@ public class SerieController {
     public Serie createSerie(@RequestBody Serie serie) {
         return serieService.save(serie);
     }
+    // =========================
+    // PUT - Actualizar serie
+    // =========================
+
+    /**
+     * PUT /api/series/{id}
+     */
+    @PutMapping("/{id}")
+    public Serie updateSerie(@PathVariable Long id, @RequestBody Serie serie) {
+
+        /**
+         * Aseguramos que el ID del path se usa
+         * para actualizar la serie correcta
+         */
+        serie.setId(id);
+
+        return serieService.save(serie);
+    }
 
 
 
