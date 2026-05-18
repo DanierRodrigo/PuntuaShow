@@ -88,6 +88,18 @@ public class SerieController {
         return serieService.save(serie);
     }
 
+    // =========================
+    // DELETE - Borrar serie
+    // =========================
+
+    /**
+     * DELETE /api/series/{id}
+     */
+    @DeleteMapping("/{id}")
+    public void deleteSerie(@PathVariable Long id) {
+        serieService.deleteById(id);
+    }
+
 
 
 }
