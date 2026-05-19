@@ -100,6 +100,17 @@ public class SerieController {
         serieService.deleteById(id);
     }
 
+    // =========================
+    // BÚSQUEDAS PERSONALIZADAS
+    // =========================
+
+    /**
+     * GET /api/series/nombre?nombre=Dark
+     */
+    @GetMapping("/nombre")
+    public List<Serie> getByNombre(@RequestParam String nombre) {
+        return serieService.findByNombre(nombre);
+    }
 
 
 }
