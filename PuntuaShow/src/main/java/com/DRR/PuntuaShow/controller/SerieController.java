@@ -112,5 +112,13 @@ public class SerieController {
         return serieService.findByNombre(nombre);
     }
 
+    /**
+     * GET /api/series/genero?genero=Drama
+     */
+    @GetMapping("/genero")
+    public List<Serie> getByGenero(@RequestParam String genero) {
+        return serieService.findByGenero(genero);
+    }
+
 
 }
