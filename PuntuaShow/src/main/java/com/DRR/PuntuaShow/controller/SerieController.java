@@ -120,5 +120,13 @@ public class SerieController {
         return serieService.findByGenero(genero);
     }
 
+    /**
+     * GET /api/series/puntuacion?min=8
+     */
+    @GetMapping("/puntuacion")
+    public List<Serie> getByPuntuacion(@RequestParam Integer min) {
+        return serieService.findByPuntuacionMinima(min);
+    }
+
 
 }
