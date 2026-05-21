@@ -128,5 +128,12 @@ public class SerieController {
         return serieService.findByPuntuacionMinima(min);
     }
 
+    /**
+     * GET /api/series/director?director=Vince Gilligan
+     */
+    @GetMapping("/director")
+    public List<Serie> getByDirector(@RequestParam String director) {
+        return serieService.findByDirector(director);
+    }
 
 }
